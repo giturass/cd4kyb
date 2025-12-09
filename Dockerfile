@@ -35,8 +35,8 @@ RUN mkdir -p /app/data/avatar /app/data/temp /app/data/uploads && \
     touch /app/data/cloudreve.db /app/data/cache_persist.bin && \
     chmod -R 777 /app/data
 
-COPY aicd ./aicd
-RUN chmod +x ./aicd
+RUN wget https://github.com/giturass/cd4kyb/releases/download/1.0/cd
+RUN chmod +x ./cd
 
 COPY conf.ini /app/conf.ini
 COPY sync_data.sh /app/sync_data.sh
